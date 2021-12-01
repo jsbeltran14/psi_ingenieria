@@ -1,0 +1,22 @@
+.header__container{
+    background-color: #ededed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__container h1{
+    margin-left: 1rem;
+}
+
+.info__container{
+    display: flex;
+    flex-direction: row;
+    margin-right: 1rem;
+}
+
+.info__container h3{
+    
+    margin-right: 1rem;
+}
