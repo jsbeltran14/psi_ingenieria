@@ -9,6 +9,7 @@ function Header() {
             <Link to="/"><h1>PSI</h1></Link>
             </div>
             <div className="info__container">
+                
                 <Link to="programadas"><h3>Programado</h3></Link>
                 <Link to="solicitudes"><h3>Solicitudes</h3></Link>
                 <Link to="alerts"><h3>Alertas</h3></Link> 

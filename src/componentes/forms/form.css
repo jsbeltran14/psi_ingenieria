@@ -1,0 +1,31 @@
+.form__container{
+    max-width: 500px;
+    margin: 5rem auto;
+    text-align: center;
+    background-color: #ededed;
+    border-radius: 5px;
+}
+.form__container label {
+    text-align: left;
+    display: block;
+  }
+  .form__container h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .form__container input, .form__container textarea, .form__container select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+  }
+  .form__container button {
+    background: #3483fa;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
