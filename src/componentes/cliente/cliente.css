@@ -1,0 +1,13 @@
+.cliente__container{
+    display: flex;
+    margin-left: 0;
+    background-color: #ededed;
+    align-items: center;
+}
+.cliente__container strong{
+    margin-right: 1rem;
+    margin-left: 4rem;
+}
+.cliente__container p{
+    margin-right: 1rem;
+}
