@@ -1,42 +1,67 @@
-import React from 'react';
+import React, {useEffect,useState} from 'react';
 import MaterialTable from "material-table";
+import axios from 'axios';
 
+const columnas=[
+    {
+        title:'Servicio',
+        field:'servicio'
+    },
+    {
+        title:'Maquina',
+        field:'maquina'
+    },
+    {
+        title:'Cliente',
+        field:'cliente'
+    },
+    {
+        title:'Fecha',
+        field:'fecha'
+    },
+    {
+        title:'Estado',
+        field:'estado'
+    }
+];
+const url ="http://localhost:3001/solictudes"
 function Solicitud() {
 
-    const columnas=[
-        {
-            title:'Servicio',
-            field:'servicio'
-        },
-        {
-            title:'Maquina',
-            field:'maquina'
-        },
-        {
-            title:'Cliente',
-            field:'cliente'
-        },
-        {
-            title:'Fecha',
-            field:'fecha'
-        },
-        {
-            title:'Estado',
-            field:'estado'
-        }
-    ];
 
-    const data=[
-        {servicio:'Mantenimiento', maquina:'Ensambladora gotero', fecha:'9/11/20', cliente:'Cliente 3', estado:'Pendiente'},
-        {servicio:'Reparacion', maquina:'Ensamble unidad de cierre', fecha:'11/11/20', cliente:'Cliente 2', estado:'Cancelado'},
-        {servicio:'Revision', maquina:'Ensambladora gotero', fecha:'12/12/20', cliente:'Cliente 1', estado:'Pendiente'},
-        {servicio:'Mantenimiento', maquina:'Ensamble unidad de cierre', fecha:'9/11/20', cliente:'Cliente 4', estado:'Pendiente'},
-        {servicio:'Reparacion', maquina:'Ensambladora gotero', fecha:'11/11/20', cliente:'Cliente 5', estado:'Cancelado'},
-        {servicio:'Revision', maquina:'Ensambladora gotero', fecha:'12/12/20', cliente:'Cliente 6', estado:'Pendiente'},
-        {servicio:'Mantenimiento', maquina:'Ensambladora gotero', fecha:'9/11/20', cliente:'Cliente 7', estado:'Pendiente'},
-        {servicio:'Reparacion', maquina:'Ensambladora gotero', fecha:'11/11/20', cliente:'Cliente 8', estado:'Cancelado'},
-        {servicio:'Revision', maquina:'Ensamble unidad de cierre', fecha:'12/12/20', cliente:'Cliente 9', estado:'Pendiente'}
-    ];
+    const [data, setData] = useState([]);
+    const [acti, setActi] = useState({
+        servicio:"",
+  maquina:"",
+  fecha:"",
+  cliente:"",
+  tel:"",
+  email:"",
+  id:""
+    });
+
+    const peticionesGet = async() =>{
+        await axios.get(url)
+        .then(response=>{
+            setData(response.data);
+        })
+    }
+
+    useEffect(()=>{
+        peticionesGet();
+    },[])
+
+    const peticionesDelete = async() =>{
+        await axios.delete(url+"/"+acti.id)
+        .then(response=>{
+            setData(data.filter(act=>act.id!==acti.id))
+        }).catch(error=>{
+            console.log(error);
+        })
+    }
+
+    const seleccionarActividad=(act,caso)=>{
+        setActi(act);
+    }
 
     return (
         <div>
@@ -53,7 +78,7 @@ function Solicitud() {
                 {
                     icon:'delete',
                     tooltip:'eliminar',
-                    onClick:(event,rowData)=>window.confirm('Seguro que deseas eliminar al cliente ' + rowData.cliente)
+                    onClick:(event,rowData)=>{seleccionarActividad(rowData,"eliminar");console.log(rowData.id);peticionesDelete();}
                 }
             ]}
             options={{

@@ -1,37 +1,38 @@
-import React from 'react';
-import MaterialTable from "material-table";;
+import React, {useEffect,useState}from 'react';
+import MaterialTable from "material-table";
+import axios from 'axios';
 
+const columnas=[
+    {
+        title:'Servicio',
+        field:'servicio'
+    },
+    {
+        title:'Fecha',
+        field:'fecha'
+    },
+    {
+        title:'Cliente',
+        field:'cliente'
+    }
+];
+const url ="http://localhost:3001/solictudes"
 function Alerta() {
-    const columnas=[
-        {
-            title:'Servicio',
-            field:'servicio'
-        },
-        {
-            title:'Fecha',
-            field:'fecha'
-        },
-        {
-            title:'Fecha Alerta',
-            field:'fechaalerta'
-        },
-        {
-            title:'Cliente',
-            field:'cliente'
-        }
-    ];
 
-    const data=[
-        {servicio:'Mantenimiento', fecha:'9/11/20', fechaalerta:'9/10/20', cliente:'Cliente 3'},
-        {servicio:'Reparacion', fecha:'11/11/20', fechaalerta:'11/10/20', cliente:'Cliente 2'},
-        {servicio:'Revision', fecha:'12/12/20', fechaalerta:'12/11/20', cliente:'Cliente 1'},
-        {servicio:'Mantenimiento', fecha:'9/11/20', fechaalerta:'9/10/20', cliente:'Cliente 4'},
-        {servicio:'Reparacion', fecha:'11/11/20', fechaalerta:'11/10/20', cliente:'Cliente 5'},
-        {servicio:'Revision', fecha:'12/12/20', fechaalerta:'12/11/20', cliente:'Cliente 6'},
-        {servicio:'Mantenimiento', fecha:'9/11/20', fechaalerta:'9/10/20', cliente:'Cliente 7'},
-        {servicio:'Reparacion', fecha:'11/11/20', fechaalerta:'11/10/20', cliente:'Cliente 8'},
-        {servicio:'Revision', fecha:'12/12/20', fechaalerta:'12/11/20', cliente:'Cliente 9'}
-    ];
+    const [data, setData] = useState([]);
+
+    const peticionesGet = async() =>{
+        await axios.get(url)
+        .then(response=>{
+            setData(response.data);
+        })
+    }
+
+    useEffect(()=>{
+        peticionesGet();
+    },[])
+
+  
     return (
         <div>
             <MaterialTable

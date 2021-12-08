@@ -1,0 +1,259 @@
+{
+  "progamados": [
+    {
+      "id": 1,
+      "servicio": "Mantenimiento",
+      "maquina": "Ensambladora gotero",
+      "fecha": "9/11/20",
+      "cliente": "Cliente 3",
+      "tel": 3107658745,
+      "email": "cliente3@gmail.com"
+    },
+    {
+      "id": 2,
+      "servicio": "Reparacion",
+      "maquina": "Ensamble unidad de cierre",
+      "fecha": "11/11/20",
+      "cliente": "Cliente 2",
+      "tel": 3107999745,
+      "email": "cliente2@gmail.com"
+    },
+    {
+      "id": 3,
+      "servicio": "Revision",
+      "maquina": "Ensambladora gotero",
+      "fecha": "12/12/20",
+      "cliente": "Cliente 1",
+      "tel": 3745858745,
+      "email": "cliente1@gmail.com"
+    },
+    {
+      "id": 4,
+      "servicio": "Mantenimiento",
+      "maquina": "Ensamble unidad de cierre",
+      "fecha": "9/11/20",
+      "cliente": "Cliente 4",
+      "tel": 2107658745,
+      "email": "cliente4@gmail.com"
+    },
+    {
+      "id": 5,
+      "servicio": "Reparacion",
+      "maquina": "Ensamble unidad de cierre",
+      "fecha": "11/11/20",
+      "cliente": "Cliente 5",
+      "tel": 6547658745,
+      "email": "cliente5@gmail.com"
+    },
+    {
+      "id": 6,
+      "servicio": "Revision",
+      "maquina": "Ensambladora gotero",
+      "fecha": "12/12/20",
+      "cliente": "Cliente 6",
+      "tel": 9877658745,
+      "email": "cliente6@gmail.com"
+    },
+    {
+      "id": 7,
+      "servicio": "Mantenimiento",
+      "maquina": "Ensambladora gotero",
+      "fecha": "9/11/20",
+      "cliente": "Cliente 7",
+      "tel": 3247658745,
+      "email": "cliente7@gmail.com"
+    },
+    {
+      "servicio": "mantenimiento",
+      "maquina": "maquina1",
+      "fecha": "2021-12-16",
+      "cliente": "cliente 11",
+      "tel": "2345646777",
+      "email": "sebas5@gmail.com",
+      "id": 8
+    },
+    {
+      "servicio": "mantenimiento",
+      "maquina": "maquina1",
+      "fecha": "2021-12-23",
+      "cliente": "cliente 11",
+      "tel": "2345646777",
+      "email": "sebas5@gmail.com",
+      "id": 9
+    }
+  ],
+  "solictudes": [
+    {
+      "id": 1,
+      "servicio": "Mantenimiento",
+      "maquina": "Ensambladora gotero",
+      "fecha": "9/11/20",
+      "cliente": "Cliente 3",
+      "tel": 3107658745,
+      "email": "cliente3@gmail.com",
+      "estado": "Pendiente"
+    },
+    {
+      "id": 2,
+      "servicio": "Reparacion",
+      "maquina": "Ensamble unidad de cierre",
+      "fecha": "11/11/20",
+      "cliente": "Cliente 2",
+      "tel": 3107999745,
+      "email": "cliente2@gmail.com",
+      "estado": "Cancelado"
+    },
+    {
+      "id": 3,
+      "servicio": "Revision",
+      "maquina": "Ensambladora gotero",
+      "fecha": "12/12/20",
+      "cliente": "Cliente 1",
+      "tel": 3745858745,
+      "email": "cliente1@gmail.com",
+      "estado": "Pendiente"
+    },
+    {
+      "id": 4,
+      "servicio": "Mantenimiento",
+      "maquina": "Ensamble unidad de cierre",
+      "fecha": "9/11/20",
+      "cliente": "Cliente 4",
+      "tel": 2107658745,
+      "email": "cliente4@gmail.com",
+      "estado": "Cancelado"
+    },
+    {
+      "id": 5,
+      "servicio": "Reparacion",
+      "maquina": "Ensamble unidad de cierre",
+      "fecha": "11/11/20",
+      "cliente": "Cliente 5",
+      "tel": 6547658745,
+      "email": "cliente5@gmail.com",
+      "estado": "Pendiente"
+    },
+    {
+      "id": 6,
+      "servicio": "Revision",
+      "maquina": "Ensambladora gotero",
+      "fecha": "12/12/20",
+      "cliente": "Cliente 6",
+      "tel": 9877658745,
+      "email": "cliente6@gmail.com",
+      "estado": "Cancelado"
+    },
+    {
+      "id": 7,
+      "servicio": "Mantenimiento",
+      "maquina": "Ensambladora gotero",
+      "fecha": "9/11/20",
+      "cliente": "Cliente 7",
+      "tel": 3247658745,
+      "email": "cliente7@gmail.com",
+      "estado": "Cancelado"
+    },
+    {
+      "id": 8,
+      "servicio": "Reparacion",
+      "maquina": "Ensambladora gotero",
+      "fecha": "11/11/20",
+      "cliente": "Cliente 8",
+      "tel": 3545658745,
+      "email": "cliente8@gmail.com",
+      "estado": "Cancelado"
+    },
+    {
+      "id": 9,
+      "servicio": "Revision",
+      "maquina": "Ensamble unidad de cierre",
+      "fecha": "12/12/20",
+      "cliente": "Cliente 9",
+      "tel": 3354658745,
+      "email": "cliente9@gmail.com",
+      "estado": "Pendiente"
+    },
+    {
+      "servicio": "arreglo",
+      "maquina": "gotero",
+      "fecha": "2021-12-17",
+      "cliente": "cliente 12",
+      "tel": "2345646776",
+      "email": "sebas3@gmail.com",
+      "estado": "cancelado",
+      "id": 11
+    }
+  ],
+  "alertas": [
+    {
+      "id": 1,
+      "servicio": "Mantenimiento",
+      "fecha": "9/11/20",
+      "cliente": "Cliente 3",
+      "email": "cliente3@gmail.com"
+    },
+    {
+      "id": 2,
+      "servicio": "Reparacion",
+      "fecha": "11/11/20",
+      "cliente": "Cliente 2",
+      "email": "cliente2@gmail.com"
+    },
+    {
+      "id": 3,
+      "servicio": "Revision",
+      "fecha": "12/12/20",
+      "cliente": "Cliente 1",
+      "email": "cliente1@gmail.com"
+    },
+    {
+      "id": 4,
+      "servicio": "Mantenimiento",
+      "fecha": "9/11/20",
+      "cliente": "Cliente 4",
+      "email": "cliente4@gmail.com"
+    },
+    {
+      "id": 5,
+      "servicio": "Reparacion",
+      "fecha": "11/11/20",
+      "cliente": "Cliente 5",
+      "email": "cliente5@gmail.com"
+    },
+    {
+      "id": 6,
+      "servicio": "Revision",
+      "fecha": "12/12/20",
+      "cliente": "Cliente 6",
+      "email": "cliente6@gmail.com"
+    },
+    {
+      "id": 7,
+      "servicio": "Mantenimiento",
+      "fecha": "9/11/20",
+      "cliente": "Cliente 7",
+      "email": "cliente7@gmail.com"
+    },
+    {
+      "id": 8,
+      "servicio": "Reparacion",
+      "fecha": "11/11/20",
+      "cliente": "Cliente 8",
+      "email": "cliente8@gmail.com"
+    },
+    {
+      "id": 9,
+      "servicio": "Revision",
+      "fecha": "12/12/20",
+      "cliente": "Cliente 9",
+      "email": "cliente9@gmail.com"
+    },
+    {
+      "servicio": "mantenimiento",
+      "fecha": "2021-12-08",
+      "cliente": "cliente 11",
+      "email": "sebas3@gmail.com",
+      "id": 10
+    }
+  ]
+}
